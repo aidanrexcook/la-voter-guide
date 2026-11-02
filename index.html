@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LA Voter Guide · Nov 3, 2026 · 90066</title>
+<style>
+  :root {
+    --ink: #1d2433; --muted: #5d6677; --line: #e3e6ec; --bg: #f6f7f9; --card: #fff;
+    --dem: #2156c9; --gop: #c62f2f; --labor: #b26a00; --chamber: #1f7a4d; --other: #6b7280;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--ink); background: var(--bg); }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 28px; margin: 0 0 4px; }
+  .sub { color: var(--muted); margin: 0 0 20px; }
+  h2 { font-size: 20px; margin: 36px 0 12px; padding-bottom: 6px; border-bottom: 2px solid var(--ink); }
+  .info { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px; margin-bottom: 12px; }
+  .info p { margin: 6px 0; }
+  .legend span { margin-right: 10px; }
+  nav { position: sticky; top: 0; z-index: 5; background: var(--bg); padding: 8px 0; display: flex; flex-wrap: wrap; gap: 6px; border-bottom: 1px solid var(--line); }
+  nav a { font-size: 14px; text-decoration: none; color: var(--ink); background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 3px 12px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px; margin-bottom: 12px; }
+  .card h3 { font-size: 17px; margin: 0; display: flex; justify-content: space-between; gap: 12px; }
+  .pg { flex: none; font-size: 12px; font-weight: 600; color: var(--muted); border: 1px solid var(--line); border-radius: 6px; padding: 1px 8px; height: fit-content; }
+  .print-only { display: none; }
+  .job { color: var(--muted); font-size: 14px; margin: 2px 0 10px; }
+  .note { font-size: 13px; color: var(--muted); margin-top: 8px; }
+  .opts { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+  label.opt { display: block; border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; cursor: pointer; }
+  label.opt:hover { border-color: #b8bfcc; }
+  label.opt:has(input:checked) { border-color: var(--ink); background: #eef1f6; box-shadow: inset 0 0 0 1px var(--ink); }
+  label.opt input { margin: 0 6px 0 0; }
+  .name { font-weight: 600; }
+  .desc { font-size: 14px; margin: 4px 0 6px; }
+  .tag { display: inline-block; font-size: 12px; font-weight: 600; padding: 1px 8px; border-radius: 999px; margin: 2px 4px 0 0; color: #fff; background: var(--other); }
+  .tag.dem { background: var(--dem); } .tag.gop { background: var(--gop); }
+  .tag.labor { background: var(--labor); } .tag.chamber { background: var(--chamber); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; }
+  .decided li { margin: 4px 0; }
+  .toolbar { margin: 8px 0 0; }
+  button { font: inherit; font-size: 14px; border: 1px solid var(--line); background: var(--card); border-radius: 6px; padding: 4px 12px; cursor: pointer; }
+  footer { color: var(--muted); font-size: 13px; margin-top: 32px; }
+  @media print {
+    @page { margin: 0.5in; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; font-size: 13px; }
+    nav, .toolbar, .screen-only { display: none; }
+    .print-only { display: block; }
+    .wrap { padding: 0; max-width: none; }
+    h2 { break-after: avoid; margin-top: 24px; }
+    .card, .info { break-inside: avoid; border-color: #ccc; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>LA Voter Guide · Nov 3, 2026</h1>
+  <p class="sub">ZIP 90066 (Mar Vista, Del Rey, Palms, Playa Vista, City of LA).</p>
+
+  <div class="info">
+    <p><b>When:</b> Polls are open until 8 pm, Tue Nov 3. Mail ballots need a Nov 3 postmark, or you can put them in a drop box by 8 pm.</p>
+    <p><b>Order:</b> Races are listed in the same order as the ballot. The <span class="pg">p. 1</span> tag shows which ballot page each one is on.</p>
+    <p class="screen-only"><b>How to use this:</b> Tap a choice to mark it. Your picks are saved in this browser. Then copy them onto your ballot.</p>
+    <p class="print-only"><b>How to use this:</b> Circle your picks, then copy them onto your ballot.</p>
+    <p class="legend"><b>Endorsements:</b>
+      <span class="tag dem">Dem</span>Democratic Party
+      <span class="tag gop">GOP</span>Republican Party
+      <span class="tag labor">Labor</span>LA County unions
+      <span class="tag chamber">Chamber</span>Business groups (LA Area Chamber; CalChamber for state props)
+    </p>
+    <p class="note">The LA Times made no endorsements this year. Some local GOP picks came from a GOP lookup tool and couldn't be fully confirmed. Check your exact ballot at <a href="https://lavote.gov">lavote.gov</a>.</p>
+    <div class="toolbar"><button id="clear">Clear my picks</button> <button onclick="window.print()">Print</button></div>
+  </div>
+
+  <nav id="nav"></nav>
+  <main id="guide"></main>
+
+  <h2 id="decided">Already decided in June (not on your ballot)</h2>
+  <div class="card decided"><ul>
+    <li><b>City Controller:</b> Kenneth Mejia won</li>
+    <li><b>City Council District 11:</b> Traci Park won</li>
+    <li><b>LAUSD Board District 4:</b> Nick Melvoin won</li>
+    <li><b>County Assessor:</b> Jeffrey Prang won</li>
+    <li><b>County Supervisor:</b> Horvath (District 3) won. District 2 isn't up this year.</li>
+  </ul></div>
+
+  <footer>Sources: CA Secretary of State, LA County Registrar (lavote.gov), LAist Voter Game Plan, CalMatters, party and union endorsement lists. Compiled Nov 1, 2026.</footer>
+</div>
+
+<script>
+// Each section is a list of races. Each race has choices with a short description and endorsements.
+// Measures use the same shape: their choices are YES and NO.
+const SECTIONS = [
+  { id: "city", title: "City offices and college board", races: [
+    { title: "LA Mayor", page: 1, job: "Runs the city: police, fire, homelessness programs, streets, and the city budget. Both candidates are Democrats. Polls show a close race.", choices: [
+      { name: "Karen Bass · incumbent", desc: "Former congresswoman. Focuses on clearing street encampments (cites a 17.5% drop in street homelessness), public safety, and city services. Criticized over the Palisades Fire response.", by: ["Dem", "Labor", "Chamber", "LAPD union", "Newsom"] },
+      { name: "Nithya Raman", desc: "City councilmember (Silver Lake to Sherman Oaks) and urban planner. Says LA is \"at a breaking point\"; wants homelessness funding tied to results, better basic services, and less city risk on the 2028 Olympics.", by: ["Sierra Club", "Hotel workers union", "Writers Guild", "LA DSA"] } ] },
+    { title: "LA City Attorney", page: 1, job: "The city's lawyer. Also prosecutes misdemeanors like petty theft and DUIs. Open seat.", choices: [
+      { name: "Marissa Roy", desc: "State deputy attorney general. Will fight the Trump administration in court; focuses on workers' and renters' rights.", by: ["Dem", "Labor"] },
+      { name: "John McKinney", desc: "County prosecutor since 1997. Runs on public safety.", by: ["Chamber", "LAPD union"] } ] },
+    { title: "Community College Board · Seat 2", page: 1, job: "Runs 9 public colleges, including LA City College and West LA College. Vote for one.", choices: [
+      { name: "Adriana Cabrera", desc: "Educator and South LA organizer.", by: [] },
+      { name: "Roy Payan", desc: "Disabled student advocate.", by: [] },
+      { name: "Robert Payne", desc: "Researcher, writer, and environmentalist.", by: [] },
+      { name: "Kristina Irwin", desc: "Parent and business owner.", by: ["GOP"] },
+      { name: "Steven Veres · incumbent", desc: "Trustee since 2011.", by: ["Dem", "Labor"] } ] },
+    { title: "Community College Board · Seat 4", page: 1, job: "Open seat. Vote for one.", choices: [
+      { name: "Darryn Harris", desc: "Community college educator.", by: ["Dem", "Labor"] },
+      { name: "Nancy Pearlman", desc: "Former trustee for 16 years; environmentalist.", by: [] },
+      { name: "Elaine Alaniz", desc: "Healthcare workforce specialist.", by: ["GOP"] },
+      { name: "Isidro Armenta", desc: "Fire department employee.", by: [] },
+      { name: "Jason Aula", desc: "Business owner and journalist.", by: [] },
+      { name: "Adam Bruno", desc: "Educational psychologist and therapist.", by: [] },
+      { name: "Priscilla Umana", desc: "ASL interpreter.", by: [] } ] },
+    { title: "Community College Board · Seat 6", page: 1, job: "Vote for one.", choices: [
+      { name: "Randall Winston", desc: "Architect; Mayor Bass's deputy mayor for infrastructure.", by: ["Dem", "Labor"] },
+      { name: "Tonia Arey", desc: "Realtor.", by: ["GOP"] },
+      { name: "Roberto Lacarra", desc: "Community college professor.", by: [] },
+      { name: "Gabriel Buelna · incumbent", desc: "Educator and attorney.", by: [] } ] },
+  ]},
+  { id: "legislature", title: "State Senate, Assembly, and Congress", races: [
+    { title: "State Senate · District 28", page: 1, job: "Covers most of 90066. If your ballot says District 24, use the next card instead.", choices: [
+      { name: "Joe Lisuzzo (R)", desc: "Restaurant owner and neighborhood councilmember. Wants to cut waste and fraud.", by: ["GOP"] },
+      { name: "Lola Smallwood-Cuevas (D) · incumbent", desc: "Former labor organizer focused on worker rights.", by: ["Dem", "Labor"] } ] },
+    { title: "State Assembly · District 55", page: 2, job: "Your state assemblymember. Both candidates are Democrats.", choices: [
+      { name: "Ashley Brown (D)", desc: "School social worker.", by: [] },
+      { name: "Isaac Bryan (D) · incumbent", desc: "In office since 2021.", by: ["Dem", "Labor"] } ] },
+    { title: "US House · District 36", page: 2, job: "Your member of Congress.", choices: [
+      { name: "Houston Brignano (R)", desc: "Tech executive. Wants an \"American workers first\" immigration system and AI job training.", by: ["GOP"] },
+      { name: "Ted Lieu (D) · incumbent", desc: "Focuses on civil rights, immigration, and regulating AI.", by: ["Dem", "Labor"] } ] },
+  ]},
+  { id: "measures", title: "City measures", races: [
+    { title: "City Measure TE · Mansion-tax break for Palisades Fire homes", page: 2, job: "Homeowners who sell a fire-damaged home for over $5M by 2030 skip the city's \"mansion tax.\"", choices: [
+      { name: "YES", desc: "Grant the break.", by: ["Dem", "GOP", "Chamber"] },
+      { name: "NO", desc: "They pay the tax.", by: [] } ] },
+    { title: "City Measure LA · City operations overhaul", page: 2, job: "Moves to a two-year city budget and requires an infrastructure plan. Gives the Public Works director more power and loosens some bidding rules.", choices: [
+      { name: "YES", desc: "Make the changes.", by: [] },
+      { name: "NO", desc: "Keep current rules.", by: ["Dem", "GOP", "Chamber"] } ] },
+    { title: "City Measure PL · Planning appeals", page: 2, job: "Replaces 7 area planning commissions with one appeals commission. Plan changes pass automatically if the council doesn't act within 75 days.", note: "The Democratic Party took no position.", choices: [
+      { name: "YES", desc: "Make the changes.", by: ["Chamber"] },
+      { name: "NO", desc: "Keep the current system.", by: ["GOP"] } ] },
+    { title: "City Measure EE · Ethics and council rules", page: 2, job: "Raises campaign-finance fines and gives the police and fire watchdogs more independence. Also lets the council meet less often and makes referendum petitions harder to qualify.", choices: [
+      { name: "YES", desc: "Make the changes.", by: [] },
+      { name: "NO", desc: "Keep current rules.", by: ["Dem", "GOP", "Chamber"] } ] },
+    { title: "City Measure PRK · More money for parks", page: 3, job: "Doubles the minimum parks budget over 10 years, using existing city money. No new tax.", choices: [
+      { name: "YES", desc: "Raise the parks budget floor.", by: ["Dem", "Labor", "Chamber"] },
+      { name: "NO", desc: "Keep the current floor.", by: ["GOP"] } ] },
+    { title: "City Measure PRT · Airport, port, and DWP rules", page: 3, job: "Allows longer leases (up to 66 years) for LAX and DWP property. Adds airport commissioners from neighborhoods near LAX and Van Nuys, and requires the port to fund public waterfront access.", choices: [
+      { name: "YES", desc: "Make the changes.", by: ["Dem"] },
+      { name: "NO", desc: "Keep current rules.", by: ["GOP", "Chamber"] } ] },
+    { title: "City Measure FD · Sales tax for the Fire Department", page: 3, job: "Raises the sales tax by 0.5% (from 10.25% to 10.75%), bringing in about $345M a year for LAFD, with no end date.", choices: [
+      { name: "YES", desc: "Add the tax.", by: ["Dem", "Firefighters", "Mayor Bass"] },
+      { name: "NO", desc: "No new tax.", by: ["GOP", "Chamber", "Taxpayer groups"] } ] },
+    { title: "City Measure SC · School board campaign rules", page: 3, job: "Makes school board races follow the same campaign-finance rules as the mayor's race.", note: "The Democratic Party took no position.", choices: [
+      { name: "YES", desc: "Match the rules.", by: [] },
+      { name: "NO", desc: "Keep current rules.", by: ["GOP"] } ] },
+  ]},
+  { id: "county", title: "County: Sheriff, judges, and measures", races: [
+    { title: "LA County Sheriff", page: 3, job: "Runs the Sheriff's Department, county jails, and policing in unincorporated areas.", choices: [
+      { name: "Robert Luna · incumbent", desc: "Former Long Beach police chief. Says violent crime has dropped every year he's been in office.", by: ["Dem", "Labor", "Chamber"] },
+      { name: "Alex Villanueva", desc: "Sheriff 2018–2022 who lost to Luna in 2022; now a Republican.", by: ["GOP"] } ] },
+    { title: "Superior Court · Office 64", page: 3, job: "LA County trial judge. The Bar rating, from best to worst, goes Exceptionally Well Qualified, Well Qualified, Qualified, Not Qualified.", choices: [
+      { name: "Rhonda Haymon", desc: "Public defender. Bar rating: Qualified.", by: [] },
+      { name: "Maria Ghobadi", desc: "Prosecutor. Bar rating: Well Qualified.", by: ["Dem", "GOP"] } ] },
+    { title: "Superior Court · Office 65", page: 3, job: "LA County trial judge.", choices: [
+      { name: "Justin Clayton", desc: "Public defender. Bar rating: Qualified.", by: ["Dem", "GOP"] },
+      { name: "Anna Slotky Reitano", desc: "County lawyer. Bar rating: Qualified.", by: [] } ] },
+    { title: "Superior Court · Office 87", page: 3, job: "LA County trial judge.", choices: [
+      { name: "David DeJute", desc: "Law professor. Bar rating: Qualified.", by: ["Dem"] },
+      { name: "A.J. Bayne", desc: "Public defender. Bar rating: Well Qualified.", by: ["GOP"] } ] },
+    { title: "Superior Court · Office 131", page: 3, job: "LA County trial judge.", note: "The GOP says either candidate is fine.", choices: [
+      { name: "David Ross", desc: "Alternate public defender. Bar rating: Qualified.", by: [] },
+      { name: "Donna Tryfman", desc: "Public defender. Bar rating: Qualified.", by: [] } ] },
+    { title: "County Measure A · Arbitration for public-safety unions", page: 4, job: "When contract talks with firefighter, deputy, and lifeguard unions stall, an outside panel makes the final call.", choices: [
+      { name: "YES", desc: "Add the arbitration panel.", by: ["Dem", "GOP", "Labor"] },
+      { name: "NO", desc: "Keep the current system, where the county can impose its final offer.", by: [] } ] },
+    { title: "County Measure E · Ethics commission and community investment", page: 4, job: "Writes an independent ethics commission into the county charter, with guaranteed funding. Also restores the rule that 10% of the county budget goes to community programs and alternatives to jail.", choices: [
+      { name: "YES", desc: "Lock in the commission and the 10%.", by: ["Dem"] },
+      { name: "NO", desc: "The commission exists without those guarantees.", by: ["GOP"] } ] },
+  ]},
+  { id: "state", title: "State offices", races: [
+    { title: "Governor", page: 4, job: "Runs the state. Signs or vetoes laws, proposes the budget, and appoints judges. Open seat: Newsom can't run again.", choices: [
+      { name: "Steve Hilton (R)", desc: "Former Fox News host and UK Conservative adviser. Promises no state income tax on the first $100K, a cut to the gas tax, and much smaller state spending.", by: ["GOP", "Trump", "CA Taxpayers groups"] },
+      { name: "Xavier Becerra (D)", desc: "Former US Health Secretary and state Attorney General. Runs on experience and enforcing worker protections.", by: ["Dem", "Labor", "CalChamber", "Teachers union", "Newsom"] } ] },
+    { title: "Lieutenant Governor", page: 4, job: "Takes over if the governor leaves. Breaks ties in the state Senate and sits on the UC and CSU boards.", choices: [
+      { name: "Gloria Romero (R)", desc: "Former Democratic Senate leader who became a Republican in 2024. Pushes school choice and vouchers.", by: ["GOP"] },
+      { name: "Fiona Ma (D)", desc: "Current State Treasurer. Runs on experience; wants colleges to cut costs and build housing.", by: ["Dem", "Labor"] } ] },
+    { title: "Secretary of State", page: 4, job: "Runs elections, certifies results, and handles business filings.", choices: [
+      { name: "Don Wagner (R)", desc: "Orange County Supervisor. Wants voter ID and faster ballot counting.", by: ["GOP"] },
+      { name: "Shirley Weber (D) · incumbent", desc: "Wants wider voting access and stronger election cybersecurity.", by: ["Dem", "Labor"] } ] },
+    { title: "Controller", page: 4, job: "The state's accountant. Pays the bills and audits state spending.", choices: [
+      { name: "Malia Cohen (D) · incumbent", desc: "Promises transparency and careful budgeting.", by: ["Dem", "Labor"] },
+      { name: "Herb Morgan (R)", desc: "Investment firm founder. Wants to use the office to root out government fraud.", by: ["GOP"] } ] },
+    { title: "Treasurer", page: 4, job: "The state's banker. Invests state money and manages its debt.", choices: [
+      { name: "Jennifer Hawks (R)", desc: "Retired tech executive. Pitches herself as an outside check on state government.", by: ["GOP"] },
+      { name: "Eleni Kounalakis (D)", desc: "Current Lt. Governor and former US ambassador.", by: ["Dem", "Labor"] } ] },
+    { title: "Attorney General", page: 4, job: "The state's top lawyer and law enforcement officer.", choices: [
+      { name: "Rob Bonta (D) · incumbent", desc: "Points to enforcing housing laws and more than 50 lawsuits against the Trump administration.", by: ["Dem", "Labor", "Teachers union"] },
+      { name: "Michael Gates (R)", desc: "Former Huntington Beach city attorney who fought state housing and criminal-justice laws.", by: ["GOP"] } ] },
+    { title: "Insurance Commissioner", page: 4, job: "Regulates insurance companies, including home and auto rates and claims. Both candidates are Democrats.", note: "The party and the unions picked different candidates here.", choices: [
+      { name: "Jane Kim (D)", desc: "Former SF supervisor. Wants state-run disaster insurance for all and penalties for slow claims.", by: ["Labor", "Teachers union"] },
+      { name: "Ben Allen (D)", desc: "State senator whose district includes the Palisades. Wants tougher enforcement, faster claims, and a consumer advocate inside the department.", by: ["Dem", "Sierra Club", "Firefighters"] } ] },
+    { title: "Board of Equalization · District 3", page: 4, job: "Oversees some state taxes, such as property tax rules. Both candidates are Democrats.", choices: [
+      { name: "Samuel Sukaton (D)", desc: "Labor union organizer and former Bernie Sanders staffer.", by: [] },
+      { name: "Mike Gipson (D)", desc: "Longtime Assemblymember.", by: ["Dem", "Labor"] } ] },
+    { title: "State Superintendent of Public Instruction", page: 4, job: "Elected head of California's public schools. The job loses some power in 2027.", choices: [
+      { name: "Sonja Shaw", desc: "Chino Valley school board president, registered Republican. Known for opposing transgender-student protections; wants a \"back to basics\" curriculum.", by: ["GOP", "Moms for Liberty"] },
+      { name: "Richard Barrera", desc: "San Diego school board president, registered Democrat. Wants more school funding and early-childhood education.", by: ["Dem", "Labor", "Teachers union"] } ] },
+  ]},
+  { id: "props", title: "State propositions", races: [
+    { title: "Prop 1 · Housing bonds ($11.25B)", page: 5, job: "The state borrows $11.25B for affordable rentals, veterans' home loans, supportive housing, and down-payment help. Repayment costs about $500–600M a year for about 25 years.", note: "The GOP is neutral.", choices: [
+      { name: "YES", desc: "The state can borrow the money.", by: ["Dem", "Labor", "CalChamber", "Newsom"] },
+      { name: "NO", desc: "It can't.", by: [] } ] },
+    { title: "Prop 2 · Bigger rainy day fund", page: 5, job: "The state has to save more in its reserve fund and keep paying down debt longer.", choices: [
+      { name: "YES", desc: "Bigger reserves.", by: ["Dem", "Labor", "CalChamber", "Newsom"] },
+      { name: "NO", desc: "Keep the current rules.", by: ["GOP"] } ] },
+    { title: "Prop 3 · Make the high-income tax permanent", page: 5, job: "Keeps the extra income tax on income over about $371K a year, which is set to end in 2031. The money goes to schools and health care, about $5–15B a year.", choices: [
+      { name: "YES", desc: "The tax becomes permanent.", by: ["Dem", "Labor", "Teachers union", "Newsom"] },
+      { name: "NO", desc: "The tax ends in 2031.", by: ["GOP", "CA Taxpayers Assn"] } ] },
+    { title: "Prop 4 · Allow public funding of campaigns", page: 5, job: "Ends the ban on public money for candidate campaigns, so state and local governments may create public financing programs.", choices: [
+      { name: "YES", desc: "Allow public campaign financing.", by: ["Dem", "Labor", "Newsom"] },
+      { name: "NO", desc: "Keep the ban.", by: ["GOP", "CalChamber"] } ] },
+    { title: "Prop 5 · Change recall elections", page: 5, job: "Removes the \"who should replace them?\" question from statewide recall ballots. The seat would be filled later by a special election or an appointment.", choices: [
+      { name: "YES", desc: "No replacement question on the recall ballot.", by: ["Dem", "Labor", "League of Women Voters", "Newsom"] },
+      { name: "NO", desc: "Voters still pick a replacement on the same ballot.", by: ["GOP"] } ] },
+    { title: "Prop 37 · Loans for middle-income new-home buyers", page: 5, job: "Up to $25B in state bonds to lend buyers up to 17% of the price of a new home under about $1.5M. Buyers repay, so there's no direct taxpayer cost.", note: "The GOP is neutral.", choices: [
+      { name: "YES", desc: "Create the home-buying help program.", by: ["Dem", "Labor", "CalChamber", "Newsom"] },
+      { name: "NO", desc: "Don't create it.", by: [] } ] },
+    { title: "Prop 38 · Immunology research bonds ($8.4B)", page: 6, job: "The state borrows $8.4B for immune-system research. Half goes to one UC-affiliated institute and half to grants. Repayment costs about $500–600M a year for about 20 years.", note: "Labor took no position.", choices: [
+      { name: "YES", desc: "The state can borrow the money.", by: ["Dem", "GOP", "Alzheimer's Assn", "Newsom"] },
+      { name: "NO", desc: "It can't.", by: [] } ] },
+    { title: "Prop 39 · Voter ID", page: 6, job: "In-person voters would have to show government ID. Mail ballots would need the last 4 digits of an ID number. Costs tens to hundreds of millions of dollars a year.", choices: [
+      { name: "YES", desc: "Require ID to vote.", by: ["GOP"] },
+      { name: "NO", desc: "Keep signature checks.", by: ["Dem", "Labor", "Newsom"] } ] },
+    { title: "Prop 40 · One-time billionaire tax", page: 6, job: "A one-time 5% tax on people worth more than $1B, mostly for health care. Brings in tens of billions of dollars over several years, but could lower yearly income tax revenue by up to $1B.", note: "Props 41 and 42 would cancel this tax if they pass.", choices: [
+      { name: "YES", desc: "Collect the tax.", by: ["Dem", "Labor", "Bernie Sanders"] },
+      { name: "NO", desc: "Don't.", by: ["GOP", "CalChamber", "Newsom"] } ] },
+    { title: "Prop 41 · Limit new taxes and audit special taxes", page: 6, job: "Cancels certain new state taxes passed after Jan 1, 2026, and requires state audits of programs paid for by new special taxes.", note: "Newsom took no position.", choices: [
+      { name: "YES", desc: "Add the limits and audits.", by: ["GOP", "CalChamber", "CA Taxpayers Assn"] },
+      { name: "NO", desc: "No change.", by: ["Dem", "Labor"] } ] },
+    { title: "Prop 42 · Ban new state taxes on personal property and wealth", page: 6, job: "Bars state taxes on owning financial assets or other personal property, and certain retroactive taxes.", choices: [
+      { name: "YES", desc: "Ban these taxes.", by: ["GOP", "CalChamber", "Newsom", "Firefighters"] },
+      { name: "NO", desc: "Keep the option open.", by: ["Dem", "Labor"] } ] },
+    { title: "Prop 43 · Two-thirds vote for local special taxes put forward by citizens", page: 7, job: "Starting in 2027, local special taxes that citizens put on the ballot would need two-thirds voter approval instead of a simple majority.", choices: [
+      { name: "YES", desc: "Require a two-thirds vote.", by: ["GOP", "CalChamber", "CA Taxpayers Assn"] },
+      { name: "NO", desc: "A simple majority is still enough.", by: ["Dem", "Labor", "Firefighters", "Newsom"] } ] },
+    { title: "Prop 44 · Community clinics must spend 90% on services", page: 7, job: "Nonprofit community health clinics would have to spend at least 90% of their revenue on patient care or face penalties.", choices: [
+      { name: "YES", desc: "Apply the 90% rule.", by: ["Labor"] },
+      { name: "NO", desc: "Don't.", by: ["Dem", "GOP", "CalChamber", "Doctors (CMA)", "Newsom"] } ] },
+    { title: "Prop 45 · Faster environmental review (CEQA)", page: 7, job: "Speeds up environmental review for most housing, transportation, water, and health projects. Sets deadlines and narrows lawsuits.", note: "Newsom took no position.", choices: [
+      { name: "YES", desc: "Faster reviews and fewer lawsuits.", by: ["GOP", "CalChamber", "Affordable-housing groups"] },
+      { name: "NO", desc: "Keep the current process.", by: ["Dem", "Labor", "Environmental groups"] } ] },
+  ]},
+  { id: "judges", title: "State judges (Yes/No)", races: [
+    { title: "State Supreme Court · Joshua Groban", page: 7, job: "Yes keeps him on the court, No removes him. Removal is very rare; it last happened in 1986.", note: "No organized opposition.", choices: [
+      { name: "YES", desc: "Keep him.", by: [] },
+      { name: "NO", desc: "Remove him.", by: [] } ] },
+    { title: "State Supreme Court · Kelli Evans", page: 7, job: "Yes keeps her on the court, No removes her.", note: "A police-union PAC is running a \"No on Evans\" campaign.", choices: [
+      { name: "YES", desc: "Keep her.", by: [] },
+      { name: "NO", desc: "Remove her.", by: [] } ] },
+    { title: "Court of Appeal · 18 justices (Yes/No each)", page: "7–9", job: "Same Yes/No question for each LA-area appeals judge. None faces an organized campaign. Ballot order: Adams, Zukin, Hoffstadt, Cody, Martinez (presiding justices), then Kim, Weingart, Richardson, Goorvitch, Hanasono, Daum, Mori, Tamzarian, Yegan, Stone, Wiley, Scherb, Viramontes.", choices: [] },
+  ]},
+];
+
+const TAG_CLASS = { Dem: "dem", GOP: "gop", Labor: "labor", Chamber: "chamber", CalChamber: "chamber" };
+// Picks are saved as { race title: choice name }, so they survive reordering.
+const STORE = "voterGuide2026-picks";
+// First-time visitors start with these already marked. They can change them.
+const DEFAULT_PICKS = { "LA Mayor": "Nithya Raman" };
+const saved = localStorage.getItem(STORE);
+const picks = saved ? JSON.parse(saved) : { ...DEFAULT_PICKS };
+
+// One-time move of picks saved by the earlier version, which stored "section-index": choice index.
+const OLD_STORE = "voterGuide2026";
+const OLD_KEYS = {"state-0":["Governor",["Xavier Becerra (D)","Steve Hilton (R)"]],"state-1":["Lieutenant Governor",["Fiona Ma (D)","Gloria Romero (R)"]],"state-2":["Secretary of State",["Shirley Weber (D) · incumbent","Don Wagner (R)"]],"state-3":["Controller",["Malia Cohen (D) · incumbent","Herb Morgan (R)"]],"state-4":["Treasurer",["Eleni Kounalakis (D)","Jennifer Hawks (R)"]],"state-5":["Attorney General",["Rob Bonta (D) · incumbent","Michael Gates (R)"]],"state-6":["Insurance Commissioner",["Ben Allen (D)","Jane Kim (D)"]],"state-7":["Board of Equalization · District 3",["Mike Gipson (D)","Samuel Sukaton (D)"]],"legislature-0":["US House · District 36",["Ted Lieu (D) · incumbent","Houston Brignano (R)"]],"legislature-1":["State Senate · District 28",["Lola Smallwood-Cuevas (D) · incumbent","Joe Lisuzzo (R)"]],"legislature-2":["State Senate · District 24 (small Venice-side corner only)",["John Erickson (D)","Brian Goldsmith (D)"]],"legislature-3":["State Assembly · District 55",["Isaac Bryan (D) · incumbent","Ashley Brown (D)"]],"judges-0":["State Supreme Court · Joshua Groban",["YES","NO"]],"judges-1":["State Supreme Court · Kelli Evans",["YES","NO"]],"judges-3":["Superior Court · Office 64",["Maria Ghobadi","Rhonda Haymon"]],"judges-4":["Superior Court · Office 65",["Justin Clayton","Anna Slotky Reitano"]],"judges-5":["Superior Court · Office 87",["A.J. Bayne","David DeJute"]],"judges-6":["Superior Court · Office 131",["Donna Tryfman","David Ross"]],"schools-0":["State Superintendent of Public Instruction",["Richard Barrera","Sonja Shaw"]],"schools-1":["Community College Board · Seat 2",["Steven Veres · incumbent","Kristina Irwin","Adriana Cabrera","Roy Payan / Robert Payne"]],"schools-2":["Community College Board · Seat 4",["Darryn Harris","Elaine Alaniz","Nancy Pearlman","Others"]],"schools-3":["Community College Board · Seat 6",["Randall Winston","Gabriel Buelna · incumbent","Tonia Arey","Roberto Lacarra"]],"local-0":["LA County Sheriff",["Robert Luna · incumbent","Alex Villanueva"]],"local-1":["LA Mayor",["Karen Bass · incumbent","Nithya Raman"]],"local-2":["LA City Attorney",["Marissa Roy","John McKinney"]],"props-0":["Prop 1 · Housing bonds ($11.25B)",["YES","NO"]],"props-1":["Prop 2 · Bigger rainy day fund",["YES","NO"]],"props-2":["Prop 3 · Make the high-income tax permanent",["YES","NO"]],"props-3":["Prop 4 · Allow public funding of campaigns",["YES","NO"]],"props-4":["Prop 5 · Change recall elections",["YES","NO"]],"props-5":["Prop 37 · Loans for middle-income new-home buyers",["YES","NO"]],"props-6":["Prop 38 · Immunology research bonds ($8.4B)",["YES","NO"]],"props-7":["Prop 39 · Voter ID",["YES","NO"]],"props-8":["Prop 40 · One-time billionaire tax",["YES","NO"]],"props-9":["Prop 41 · Limit new taxes and audit special taxes",["YES","NO"]],"props-10":["Prop 42 · Ban new state taxes on personal property and wealth",["YES","NO"]],"props-11":["Prop 43 · Two-thirds vote for local special taxes put forward by citizens",["YES","NO"]],"props-12":["Prop 44 · Community clinics must spend 90% on services",["YES","NO"]],"props-13":["Prop 45 · Faster environmental review (CEQA)",["YES","NO"]],"measures-0":["County Measure A · Arbitration for public-safety unions",["YES","NO"]],"measures-1":["County Measure E · Ethics commission and community investment",["YES","NO"]],"measures-2":["City Measure TE · Mansion-tax break for Palisades Fire homes",["YES","NO"]],"measures-3":["City Measure LA · City operations overhaul",["YES","NO"]],"measures-4":["City Measure PL · Planning appeals",["YES","NO"]],"measures-5":["City Measure EE · Ethics and council rules",["YES","NO"]],"measures-6":["City Measure PRK · More money for parks",["YES","NO"]],"measures-7":["City Measure PRT · Airport, port, and DWP rules",["YES","NO"]],"measures-8":["City Measure FD · Sales tax for the Fire Department",["YES","NO"]],"measures-9":["City Measure SC · School board campaign rules",["YES","NO"]]};
+const oldPicks = JSON.parse(localStorage.getItem(OLD_STORE) || "null");
+if (oldPicks) {
+  for (const [key, i] of Object.entries(oldPicks)) {
+    const [title, names] = OLD_KEYS[key] || [];
+    if (title && names[i] && !(title in picks)) picks[title] = names[i];
+  }
+  localStorage.setItem(STORE, JSON.stringify(picks));
+  localStorage.removeItem(OLD_STORE);
+}
+
+const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const tags = by => by.length
+  ? by.map(b => `<span class="tag ${TAG_CLASS[b] || ""}">${esc(b)}</span>`).join("")
+  : `<span class="note">No major endorsements</span>`;
+
+function renderRace(race) {
+  const opts = race.choices.map(c => `
+    <label class="opt">
+      <div><input type="radio" name="${esc(race.title)}" value="${esc(c.name)}" ${picks[race.title] === c.name ? "checked" : ""}><span class="name">${esc(c.name)}</span></div>
+      <div class="desc">${esc(c.desc)}</div>
+      <div>${tags(c.by)}</div>
+    </label>`).join("");
+  return `<div class="card">
+    <h3><span>${esc(race.title)}</span><span class="pg">p. ${race.page}</span></h3>
+    <div class="job">${esc(race.job)}</div>
+    ${opts ? `<div class="opts">${opts}</div>` : ""}
+    ${race.note ? `<div class="note">${esc(race.note)}</div>` : ""}
+  </div>`;
+}
+
+document.getElementById("nav").innerHTML =
+  SECTIONS.map(s => `<a href="#${s.id}">${s.title}</a>`).join("") + `<a href="#decided">Decided in June</a>`;
+document.getElementById("guide").innerHTML = SECTIONS.map(s =>
+  `<h2 id="${s.id}">${s.title}</h2>` + s.races.map(renderRace).join("")
+).join("");
+
+document.addEventListener("change", e => {
+  if (e.target.type !== "radio") return;
+  picks[e.target.name] = e.target.value;
+  localStorage.setItem(STORE, JSON.stringify(picks));
+});
+document.getElementById("clear").onclick = () => {
+  for (const k in picks) delete picks[k];
+  localStorage.setItem(STORE, "{}");
+  document.querySelectorAll("input[type=radio]").forEach(r => (r.checked = false));
+};
+</script>
+</body>
+</html>
