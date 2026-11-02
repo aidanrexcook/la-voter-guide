@@ -24,6 +24,10 @@
   .card h3 { font-size: 17px; margin: 0; display: flex; justify-content: space-between; gap: 12px; }
   .pg { flex: none; font-size: 12px; font-weight: 600; color: var(--muted); border: 1px solid var(--line); border-radius: 6px; padding: 1px 8px; height: fit-content; }
   .print-only { display: none; }
+  .lookup { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .lookup th, .lookup td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+  .lookup th { color: var(--muted); font-weight: 600; }
+  .lookup tr.mine td { font-weight: 600; }
   .job { color: var(--muted); font-size: 14px; margin: 2px 0 10px; }
   .note { font-size: 13px; color: var(--muted); margin-top: 8px; }
   .opts { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
@@ -51,6 +55,7 @@
     .print-only { display: block; }
     .wrap { padding: 0; max-width: none; }
     h2 { break-after: avoid; margin-top: 24px; }
+    #westside { break-before: page; }
     .card, .info { break-inside: avoid; border-color: #ccc; }
   }
 </style>
@@ -58,7 +63,7 @@
 <body>
 <div class="wrap">
   <h1>LA Voter Guide · Nov 3, 2026</h1>
-  <p class="sub">ZIP 90066 (Mar Vista, Del Rey, Palms, Playa Vista, City of LA).</p>
+  <p class="sub">Built from the ballot for ZIP 90066 (Mar Vista and Del Rey, City of LA). Live elsewhere on the Westside? See <a href="#westside">Other Westside districts</a> at the end.</p>
 
   <div class="info">
     <p><b>When:</b> Polls are open until 8 pm, Tue Nov 3. Mail ballots need a Nov 3 postmark, or you can put them in a drop box by 8 pm.</p>
@@ -77,6 +82,24 @@
 
   <nav id="nav"></nav>
   <main id="guide"></main>
+
+  <h2 id="westside">Other Westside districts</h2>
+  <div class="card">
+    <div class="job">Everything above applies to anyone in the City of LA, except three races: US House, State Senate, and Assembly. Find your neighborhood below, then use the matching cards instead of the ones above. Near a border? Check your exact districts at <a href="https://lavote.gov">lavote.gov</a>.</div>
+    <table class="lookup">
+      <tr><th>Neighborhood</th><th>US House</th><th>State Senate</th><th>Assembly</th></tr>
+      <tr class="mine"><td>Mar Vista, Del Rey (this guide)</td><td>36</td><td>28</td><td>55</td></tr>
+      <tr><td>Playa Vista, Westchester</td><td>36</td><td>28</td><td>55 or 61</td></tr>
+      <tr><td>Palms, Century City</td><td>36 or 37</td><td>28</td><td>55</td></tr>
+      <tr><td>Rancho Park, Cheviot Hills</td><td>36 or 37</td><td>28</td><td>51</td></tr>
+      <tr><td>Venice, Playa del Rey</td><td>36</td><td>24</td><td>61</td></tr>
+      <tr><td>Westwood, UCLA, Sawtelle</td><td>36</td><td>24</td><td>51</td></tr>
+      <tr><td>Brentwood</td><td>32</td><td>24</td><td>42 or 51</td></tr>
+      <tr><td>Pacific Palisades</td><td>32</td><td>24</td><td>42</td></tr>
+    </table>
+    <div class="note">Santa Monica, Culver City, Beverly Hills, and West Hollywood are separate cities. Voters there skip the LA Mayor, City Attorney, and city measures, and have their own local items that this guide doesn't cover. Candidates in these extra races may appear in a different order on your ballot.</div>
+  </div>
+  <div id="westside-races"></div>
 
   <h2 id="decided">Already decided in June (not on your ballot)</h2>
   <div class="card decided"><ul>
@@ -265,6 +288,28 @@ const SECTIONS = [
   ]},
 ];
 
+// Races for other Westside districts (not on the 90066 ballot). Same shape as SECTIONS races, without page numbers.
+const OTHER_DISTRICTS = [
+  { title: "US House · District 32", job: "Brentwood and Pacific Palisades, plus parts of the Valley and Ventura County.", choices: [
+    { name: "Brad Sherman (D) · incumbent", desc: "In Congress since 1997; long-time Valley and Westside congressman.", by: ["Dem", "Labor"] },
+    { name: "Larry Thompson (R)", desc: "Attorney and film producer. Wants to rebuild the Palisades, build above-ground transit, and end \"one-party rule.\" Lost to Sherman in 2024.", by: ["GOP"] } ] },
+  { title: "US House · District 37", job: "Parts of Palms, Century City, and Rancho Park, plus Culver City and South LA. Both candidates are Democrats.", choices: [
+    { name: "Sydney Kamlager-Dove (D) · incumbent", desc: "In Congress since 2023; former state legislator.", by: ["Dem", "Labor"] },
+    { name: "Samantha Mota (D)", desc: "Community advocate and first-time candidate. Promises \"new, bold, and transparent\" leadership.", by: [] } ] },
+  { title: "State Senate · District 24", job: "Venice, Playa del Rey, Westwood, Sawtelle, Brentwood, the Palisades, and Santa Monica. Open seat. Both candidates are Democrats; the Democratic Party made no pick.", choices: [
+    { name: "John Erickson (D)", desc: "West Hollywood councilmember. Focuses on housing, cost of living, and climate.", by: ["Labor", "Teachers union"] },
+    { name: "Brian Goldsmith (D)", desc: "Small business owner. Pitches affordability and working across party lines.", by: ["LAPD union", "CA Environmental Voters"] } ] },
+  { title: "State Assembly · District 42", job: "Pacific Palisades (and possibly part of Brentwood), Malibu, and out to Ventura County. Open seat.", choices: [
+    { name: "Deborah Klein Lopez (D)", desc: "Agoura Hills councilmember. Focuses on wildfire recovery, the environment, and schools.", by: ["Dem", "Labor", "Teachers union"] },
+    { name: "Ted Nordblum (R)", desc: "Small business owner. Focuses on crime, homelessness, protecting Prop 13, and cutting gas taxes.", by: ["GOP"] } ] },
+  { title: "State Assembly · District 51", job: "Westwood/UCLA, Sawtelle, Cheviot Hills, Santa Monica, Beverly Hills, West Hollywood, and Hollywood. Both candidates are Democrats.", choices: [
+    { name: "Rick Chavez Zbur (D) · incumbent", desc: "In office since 2022; longtime LGBTQ+ rights advocate. Bills on housing, climate, and reproductive rights.", by: ["Dem", "Labor", "Nurses union"] },
+    { name: "Colin Hernandez (D)", desc: "Progressive digital strategist. Wants Medicare for All, universal childcare, and more housing; takes no corporate money.", by: ["UCLA Young Dem. Socialists"] } ] },
+  { title: "State Assembly · District 61", job: "Venice, Westchester, and Marina del Rey, plus Inglewood and Hawthorne.", choices: [
+    { name: "Tina McKinnor (D) · incumbent", desc: "In office since 2022; former community organizer and Assembly chief of staff.", by: ["Dem", "Labor", "Teachers union"] },
+    { name: "Brian Lockwood (R)", desc: "Made the ballot as a write-in in June (1.4%). No campaign information found.", by: [] } ] },
+];
+
 const TAG_CLASS = { Dem: "dem", GOP: "gop", Labor: "labor", Chamber: "chamber", CalChamber: "chamber" };
 // Picks are saved as { race title: choice name }, so they survive reordering.
 const STORE = "voterGuide2026-picks";
@@ -299,7 +344,7 @@ function renderRace(race) {
       <div>${tags(c.by)}</div>
     </label>`).join("");
   return `<div class="card">
-    <h3><span>${esc(race.title)}</span><span class="pg">p. ${race.page}</span></h3>
+    <h3><span>${esc(race.title)}</span>${race.page ? `<span class="pg">p. ${race.page}</span>` : ""}</h3>
     <div class="job">${esc(race.job)}</div>
     ${opts ? `<div class="opts">${opts}</div>` : ""}
     ${race.note ? `<div class="note">${esc(race.note)}</div>` : ""}
@@ -307,10 +352,11 @@ function renderRace(race) {
 }
 
 document.getElementById("nav").innerHTML =
-  SECTIONS.map(s => `<a href="#${s.id}">${s.title}</a>`).join("") + `<a href="#decided">Decided in June</a>`;
+  SECTIONS.map(s => `<a href="#${s.id}">${s.title}</a>`).join("") + `<a href="#westside">Other Westside districts</a><a href="#decided">Decided in June</a>`;
 document.getElementById("guide").innerHTML = SECTIONS.map(s =>
   `<h2 id="${s.id}">${s.title}</h2>` + s.races.map(renderRace).join("")
 ).join("");
+document.getElementById("westside-races").innerHTML = OTHER_DISTRICTS.map(renderRace).join("");
 
 document.addEventListener("change", e => {
   if (e.target.type !== "radio") return;
